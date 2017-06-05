@@ -1,6 +1,14 @@
 Get and install Python 3.6.1 from python.org. 
+
 You'll have two Python runtimes
-  python --version -> Python 2.7.10
-  python3 --version -> Python 3.6.1
+  python --version    # Python 2.7.10
+  python3 --version   # Python 3.6.1
   
-  
+pip3 install watson-developer-cloud  # pip3 installs into the Python 3 environment.  That's important!
+
+Download and install PyCharm CE.
+
+When you first start PyCharm, selet Checkout from Version Control / Git.  The Git URL is https://github.com/prsalm/CDW_Watson_Nao.git.
+
+In PyCharm, Preferences / Project: CDW Watson / Project Interpreter and change it to 3.6.1.
+

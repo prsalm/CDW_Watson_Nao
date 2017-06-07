@@ -3,6 +3,8 @@ Get and install Python 3.6.1 from python.org.
 You'll have two Python runtimes
   python --version    # Python 2.7.10
   python3 --version   # Python 3.6.1
+
+/Applications/Python\ 3.6/Install\ Certificates.command
   
 pip3 install watson-developer-cloud  # pip3 installs into the Python 3 environment.  That's important!
 

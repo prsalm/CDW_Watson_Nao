@@ -28,12 +28,24 @@ def classifyFile():
         os.unlink(imageFile.name)
         return json.dumps(response, indent=4)
 
-        # return response["images"][0]["classifiers"][0]["classes"][0]["class"]
+        # return respon    se["images"][0]["classifiers"][0]["classes"][0]["class"]
 
-    @app.route("/")
-    @app.route("/test")
-    def test():
-        return "This is /test @ " + str(datetime.datetime.now().time())
+@app.route("/")
+@app.route("/test")
+def chester():
+    return "This is /test @ " + str(datetime.datetime.now().time())
+
+@app.route("/abc/<p1>/<p2>", methods=["GET", "POST"])
+def abc(p1, p2):
+
+    if "abc" in request.form:
+        if "xyz" in request.headers:
+            return "{0} {1} {2} {3}".format(request.headers["xyz"], request.form["abc"], p1, p2)
+        else:
+            return "{0} {1} {2}".format(request.form["abc"], p1, p2)
+    else:
+        return "p1: {0}, p2: {1}".format(p1, p2)
+
 
 # #############################################
 # #############################################

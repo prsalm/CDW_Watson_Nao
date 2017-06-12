@@ -4,13 +4,13 @@ You'll have two Python runtimes
   python --version    # Python 2.7.10
   python3 --version   # Python 3.6.1
 
-/Applications/Python\ 3.6/Install\ Certificates.command
+Run -> /Applications/Python\ 3.6/Install\ Certificates.command
   
-pip3 install watson-developer-cloud  # pip3 installs into the Python 3 environment.  That's important!
+Run -> pip3 install watson-developer-cloud  # pip3 installs into the Python 3 environment.  That's important!
 
 Download and install PyCharm CE.
 
 When you first start PyCharm, select Checkout from Version Control / Git.  The Git URL is https://github.com/prsalm/CDW_Watson_Nao.git.
 
-In PyCharm, Preferences / Project: CDW Watson / Project Interpreter and change it to 3.6.1.
+In PyCharm, Preferences / Project: CDW Watson Nao / Project Interpreter and change it to 3.6.1.
 

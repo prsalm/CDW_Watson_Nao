@@ -30,6 +30,11 @@ def classifyFile():
 
         # return respon    se["images"][0]["classifiers"][0]["classes"][0]["class"]
 
+@app.route("/pi/url/<path:url>")
+def piUrl(url):
+    return url
+
+
 @app.route("/")
 @app.route("/test")
 def chester():

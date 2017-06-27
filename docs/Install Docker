@@ -1,0 +1,27 @@
+Download Docker for Mac from https://www.docker.com/docker-mac.  
+
+After install go to a command prompt (Terminal) and do a "docker version".  It should be 17.03.1-ce.
+
+Make sure you have Python3 installed.  "python3 --version" should be 3.6.1.
+
+Make sure Docker is working properly.  Run "docker run hello-world".  You should get the results described here https://hub.docker.com/_/hello-world/.
+
+You're ready to roll.  To run my VR container locally on your laptop ---
+   cd ~/PyCharmProjects/CDW_Watson_Nao 
+      Get into the directory where you've checked out the code.
+      This is the directory where you'll see the Dockerfile and app.py
+      
+   docker build -t cdw_dev/robotserver:latest .
+      This will build the container image.  That trailing . is important!
+      
+   docker images
+      List the images on your machine.  You should see Hello World and cdw_dev/robotserver:latest.
+      
+   docker run --rm -e VR_WATSON_API_KEY=<paste in your VR API key> -n robotserver -d -p 5000:5000 cdw_dev/robotserver
+      This will run the robotserver container image.  You can test it with 
+        http://localhost:5000/classify/url/http:/some/url/to/an/image
+        
+Now you're in business.  You can edit app.py and when you want to deploy and test the changes
+in a new container, simply do "docker stop robotserver" and then the docker build and docker run commands 
+above to start the new container.
+   

@@ -19,5 +19,8 @@ class WatsonVRController:
             f = open("watson_vr.key", "r+b")
             key = f.read()
             f.close()
+
+        print(f"The key is {key}.")
+
         return key
 

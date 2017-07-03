@@ -16,7 +16,7 @@ Do not install the IBM Cloud Applications Tools 2 Beta for Mac.  You'll regret i
 #### Setup the Bluemix CLI
 
 1. Install the Bluemix CLI (bx).  https://console.bluemix.net/docs/cli/index.html#cli
-2. Install the Bluemix IBM-Containers, container-registry and container-service plugins.
+2. Install the Bluemix IBM-Containers, container-registry and container-service plugins.  https://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins
 3. Confirm the CLI is installed properly by doing... `bx info`.
 4. Login to Bluemix with the CLI... `bx login`.
 

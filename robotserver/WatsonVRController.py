@@ -14,9 +14,7 @@ class WatsonVRController:
     def getApiKey(self):
         key = ""
         try:
-            print(os.environ)
             key = os.environ["VR_WATSON_API_KEY"]
-            print(f"The environment key is {key}")
         except KeyError:
             f = open("watson_vr.key", "r+b")
             key = f.read()

@@ -86,6 +86,27 @@ def forceFemale():
     return "Female"
 
 
+@app.route("/pi/form")
+def servePiForm():
+    return """
+    <html>
+    <head><title>Twitter Handle</title></head>
+    <body>
+        <form action="/pi/handle" method="get">
+            Handle: <input type="text" name="handle" />
+            <br />
+            <input type="submit" />
+        </form>
+    </body>
+    </html>
+    """
+
+@app.route("/pi/handle")
+def getInsight():
+    handle = request.args.get("handle")
+    return handle
+
+
 # #############################################
 # #############################################
 # #############################################
